@@ -1,0 +1,9 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hyperday · signed in</title>
+<style>body{font-family:-apple-system,system-ui,sans-serif;max-width:560px;margin:15vh auto;padding:0 20px;text-align:center}</style></head>
+<body><h2>Returning to Hyperday…</h2><p id="m"></p>
+<script>
+// Hand the one-time sign-in code to the app. Nothing is stored or sent anywhere else.
+var q = location.search;
+if (q) { location.href = "hyperday://tesla-callback" + q; document.getElementById("m").textContent = "If the app didn't open, go back to Hyperday."; }
+else { document.getElementById("m").textContent = "Nothing to do here."; }
+</script></body></html>
